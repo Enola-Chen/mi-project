@@ -4,14 +4,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        // 保留 Vue 的顏色變數
-        'vt-c-white': '#ffffff',
-        'vt-c-white-soft': '#f8f8f8',
-        'vt-c-white-mute': '#f2f2f2',
-        'vt-c-black': '#181818',
-        'vt-c-black-soft': '#222222',
-        'vt-c-black-mute': '#282828',
-        'vt-c-indigo': '#2c3e50',
+        // 小米品牌色
+        orange: '#ff6a00',
+        gray: '#8a8a8a',
+        'gray-light': '#fafafa',
+        'background-gray': '#f7f7f7',
       },
     },
   },

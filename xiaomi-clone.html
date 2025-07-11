@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>小米商城官網</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Material Icons (npm) -->
+    <link rel="stylesheet" href="./node_modules/material-icons/iconfont/material-icons.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap');
+      body {
+        font-family: 'Noto Sans TC', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <div>
+        <!-- top advertisement -->
+        <div class="flex bg-black text-white text-sm py-2">
+          <p class="text-center flex-1">物流及退貨服務公告</p>
+          <div class="flex justify-end">
+            <button class="text-white hover:text-gray-300 transition-colors px-4">
+              <span class="material-icons text-base">close</span>
+            </button>
+          </div>
+        </div>
+        <!-- 主導航欄 -->
+        <div class="bg-white shadow-sm border-b">
+          <div class="max-w-7xl mx-auto flex items-center justify-between h-16 px-4">
+            <!-- 左側 - Logo 和主選單 -->
+            <div class="flex items-center space-x-8">
+              <!-- MI Logo -->
+              <div class="flex items-center">
+                <img src="./src/images/mi-logo.png" alt="mi-logo" class="w-14" />
+              </div>
+
+              <!-- 主要導航選單 -->
+              <div class="hidden md:flex items-center space-x-8">
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >小米商城</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >手機/平板</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >智慧穿戴</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >智慧居家</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >生活方式</a
+                >
+                <a
+                  href="#"
+                  class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+                  >POCO</a
+                >
+              </div>
+            </div>
+
+            <!-- 右側 - 功能連結和圖標 -->
+            <div class="flex items-center space-x-6">
+              <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors"
+                >中獎名單</a
+              >
+              <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors"
+                >探索更多</a
+              >
+              <a href="#" class="text-gray-600 hover:text-orange-500 text-sm transition-colors"
+                >小米支援</a
+              >
+
+              <!-- 搜尋圖標 -->
+              <button class="text-gray-600 hover:text-orange-500 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- 購物車圖標 -->
+              <button class="text-gray-600 hover:text-orange-500 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.293 2.293a1 1 0 00-.293.707V19a2 2 0 002 2h10a2 2 0 002-2v-2.586a1 1 0 00-.293-.707L16 13"
+                  ></path>
+                </svg>
+              </button>
+
+              <!-- 用戶登入圖標 -->
+              <button class="text-gray-600 hover:text-orange-500 transition-colors">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 小米支援頁面內容 -->
+      <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+          <h1 class="text-center text-4xl font-bold text-gray-900 mb-16">小米支援</h1>
+          <!-- 支援服務卡片 -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- 小米服務中心 -->
+            <div>
+              <div class="p-8 text-center">
+                <!-- 位置圖標 -->
+                <div class="flex justify-center mb-6">
+                  <span class="material-icons text-gray-400" style="font-size: 48px"
+                    >location_on</span
+                  >
+                </div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">小米服務中心</h2>
+                <p class="text-gray-600 text-xs">維修100%正品官方配件</p>
+              </div>
+            </div>
+
+            <!-- 聯繫我們 -->
+            <div>
+              <div class="p-8 text-center">
+                <!-- 耳機圖標 -->
+                <div class="flex justify-center mb-6">
+                  <span class="material-icons text-gray-400" style="font-size: 48px">headset</span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">聯繫我們</h2>
+                <p class="text-gray-600 text-xs">如有任何疑問，歡迎聯繫客服服務</p>
+              </div>
+            </div>
+
+            <!-- 常見問題 -->
+            <div>
+              <div class="p-8 text-center">
+                <!-- 幫助圖標 -->
+                <div class="flex justify-center mb-6">
+                  <span class="material-icons text-gray-400" style="font-size: 48px"
+                    >help_outline</span
+                  >
+                </div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">常見問題</h2>
+                <p class="text-gray-600 text-xs">搜尋關於小米的幫助</p>
+              </div>
+            </div>
+
+            <!-- 用戶指南 -->
+            <div>
+              <div class="p-8 text-center">
+                <!-- 文檔圖標 -->
+                <div class="flex justify-center mb-6">
+                  <span class="material-icons text-gray-400" style="font-size: 48px">layers</span>
+                </div>
+                <h2 class="text-xl font-semibold text-gray-900 mb-4">用戶指南</h2>
+                <p class="text-gray-600 text-xs">查找並下載您的小米產品用戶指南</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
