@@ -119,7 +119,7 @@ const swiperModules = [Autoplay, Pagination, Navigation]
     </div>
 
     <!-- 主要輪播區域 -->
-    <div class="h-[600px] bg-gray-100">
+    <div class="h-3/5 bg-gray-100">
       <swiper
         :spaceBetween="30"
         :centeredSlides="true"
@@ -133,7 +133,7 @@ const swiperModules = [Autoplay, Pagination, Navigation]
         :navigation="true"
         :modules="swiperModules"
         @autoplayTimeLeft="onAutoplayTimeLeft"
-        class="mySwiper h-full"
+        class="mySwiper"
       >
         <swiper-slide>
           <div class="relative w-full h-full">
