@@ -19,10 +19,11 @@ const onAutoplayTimeLeft = (s, time, progress) => {
 }
 
 const swiperModules = [Autoplay, Pagination, Navigation]
+const modules = [Navigation]
 </script>
 
 <template>
-  <div>
+  <div class="bg-background-gray">
     <div>
       <!-- top advertisement -->
       <div class="flex bg-black text-white text-sm py-2">
@@ -119,12 +120,12 @@ const swiperModules = [Autoplay, Pagination, Navigation]
     </div>
 
     <!-- 主要輪播區域 -->
-    <div class="h-[600px] bg-gray-100">
+    <div class="h-[30rem] bg-gray-100">
       <swiper
         :spaceBetween="30"
         :centeredSlides="true"
         :autoplay="{
-          delay: 4000,
+          delay: 100000,
           disableOnInteraction: false,
         }"
         :pagination="{
@@ -141,17 +142,18 @@ const swiperModules = [Autoplay, Pagination, Navigation]
               src="../images/MainPage/bannerCoupon.png"
               alt="bannerCoupon"
               class="w-full h-full object-cover"
+              ㄌ
             />
           </div>
           <div class="absolute inset-0 flex items-center ml-[18rem]">
             <div class="max-w-lg">
-              <p class="text-4xl font-black mb-2 leading-tight">青春Fun價去<br />學生專屬加碼</p>
-              <p class="text-xl font-bold mt-4">手機平板66折起</p>
-              <p class="text-xl font-bold mb-4">學生憑證再享千元優惠和多重禮</p>
-              <p>7.8 | 10:00 - 7.31 | 23:59</p>
-              <div class="flex space-x-4 mt-8">
+              <p class="text-lg font-black mb-2 leading-tight">青春Fun價去<br />學生專屬加碼</p>
+              <p class="font-black mt-3">手機平板66折起</p>
+              <p class="font-black mb-3">學生憑證再享千元優惠和多重禮</p>
+              <p class="text-sm mb-12">7.8 | 10:00 - 7.31 | 23:59</p>
+              <div>
                 <button
-                  class="bg-black text-white px-4 py-1 rounded-lg font-extrabold hover:bg-gray-800 transition-colors"
+                  class="text-sm bg-black text-white px-3 py-1 rounded-lg font-bold hover:bg-gray-800 transition-colors"
                 >
                   暸解更多
                 </button>
@@ -169,19 +171,21 @@ const swiperModules = [Autoplay, Pagination, Navigation]
           </div>
           <div class="absolute inset-0 flex items-center ml-[18rem]">
             <div class="max-w-lg">
-              <p class="text-4xl font-black mb-2 leading-tight">Xiaomi 手環 10 NFC版</p>
-              <p class="text-xl font-bold my-4">7/30前下單享85折配件加購</p>
-              <p class="text-xl font-bold">
-                9/30前購 NFC 版首次使用 Easy Wallet App 加值贈 $100回饋金
+              <p class="text-3xl font-black leading-tight">Xiaomi 手環 10 NFC版</p>
+              <p class="font-black my-4">7/30前下單享85折配件加購</p>
+              <p class="text-sm">
+                9/30前購 NFC 版首次使用 Easy Wallet App 加值贈<span class="block text-sm"
+                  >$100回饋金</span
+                >
               </p>
-              <p class="mt-6">從 <span class="text-sm">NT$</span>1,199 起</p>
-              <div class="flex mt-4">
+              <p class="text-sm mt-12">從 <span class="text-sm">NT$</span>1,199 起</p>
+              <div>
                 <button
-                  class="bg-black text-white px-4 py-1 rounded-lg font-extrabold hover:bg-gray-800 transition-colors"
+                  class="text-sm bg-black text-white px-3 py-1 rounded-lg font-bold hover:bg-gray-800 transition-colors"
                 >
                   立即購買
                 </button>
-                <button class="text-black px-4 py-1 rounded-lg font-extrabold">暸解更多</button>
+                <button class="text-sm text-black px-3 py-1 rounded-lg font-bold">暸解更多</button>
               </div>
             </div>
           </div>
@@ -196,27 +200,27 @@ const swiperModules = [Autoplay, Pagination, Navigation]
           </div>
           <div class="absolute inset-0 flex items-center ml-[18rem]">
             <div class="max-w-lg">
-              <p class="text-4xl font-black mb-2 leading-tight">POCO X7 Pro</p>
-              <p class="text-xl font-bold mt-4">支援 Google 錢包啟用 iPASS 一卡通服務</p>
-              <p class="text-xl font-bold mb-2">旗艦級 Dimensity 8400-Ultra 處理器</p>
-              <p class="text-xl font-bold mb-4">6000mAh超大電量與90W極速快充</p>
-              <div class="flex items-end space-x-4 mt-20">
-                <p><span class="text-sm">NT$</span>7,999</p>
+              <p class="text-3xl font-black mb-2 leading-tight">POCO X7 Pro</p>
+              <p class="font-black mt-3">支援 Google 錢包啟用 iPASS 一卡通服務</p>
+              <p class="font-black mb-3">旗艦級 Dimensity 8400-Ultra 處理器</p>
+              <p class="font-black mb-3">6000mAh超大電量與90W極速快充</p>
+              <div class="flex items-end space-x-4">
+                <p class="text-sm"><span class="text-sm">NT$</span>7,999</p>
                 <p class="text-sm line-through text-gray-500">NT$9,999</p>
               </div>
-              <div class="flex mt-4">
+              <div class="mb-12">
                 <button
-                  class="bg-black text-white px-4 py-1 rounded-lg font-extrabold hover:bg-gray-800 transition-colors"
+                  class="text-sm bg-black text-white px-3 py-1 rounded-lg font-bold hover:bg-gray-800 transition-colors"
                 >
                   立即購買
                 </button>
-                <button class="text-black px-4 py-1 rounded-lg font-extrabold">暸解更多</button>
+                <button class="text-sm text-black px-3 py-1 rounded-lg font-bold">暸解更多</button>
               </div>
             </div>
           </div>
         </swiper-slide>
         <swiper-slide>
-          <div class="relative w-full h-full">
+          <div class="relative w-full">
             <img
               src="../images/MainPage/bannerFloor.png"
               alt="bannerFloor"
@@ -225,21 +229,21 @@ const swiperModules = [Autoplay, Pagination, Navigation]
           </div>
           <div class="absolute inset-0 flex items-center ml-[18rem]">
             <div class="max-w-lg">
-              <p class="text-4xl font-black text-white mb-2 leading-tight">
+              <p class="text-3xl font-black text-white mb-2 leading-tight">
                 Xiaomi 掃拖機器人 X20 Max
               </p>
-              <p class="text-xl font-bold text-white mt-4 mb-6">可延伸拖地邊刷 8000Pa毫米級清潔</p>
-              <div class="flex items-end space-x-4 mt-20">
-                <p class="text-white"><span class="text-sm text-white">NT$</span>14,499</p>
+              <p class="font-black text-white mt-3 mb-3">可延伸拖地邊刷 8000Pa毫米級清潔</p>
+              <div class="flex items-end space-x-4">
+                <p class="text-white text-sm"><span class="text-sm text-white">NT$</span>14,499</p>
                 <p class="text-sm line-through text-gray-500">NT$15,995</p>
               </div>
-              <div class="flex mt-4">
+              <div class="mb-12">
                 <button
-                  class="bg-white px-4 py-1 rounded-lg font-extrabold hover:bg-gray-800 transition-colors"
+                  class="text-sm bg-white px-3 py-1 rounded-lg font-bold hover:bg-gray-800 transition-colors"
                 >
                   立即購買
                 </button>
-                <button class="text-white px-4 py-1 rounded-lg font-extrabold">暸解更多</button>
+                <button class="text-sm text-white px-3 py-1 rounded-lg font-bold">暸解更多</button>
               </div>
             </div>
           </div>
@@ -256,9 +260,9 @@ const swiperModules = [Autoplay, Pagination, Navigation]
       </swiper>
     </div>
 
-    <div class="py-16 bg-background-gray">
+    <div class="py-16">
       <div class="w-full px-4">
-        <h2 class="text-center text-4xl font-bold text-gray-900 mb-12">熱門商品</h2>
+        <h2 class="text-center text-3xl font-bold text-gray-900 mb-11">熱門商品</h2>
 
         <!-- 产品分类导航 -->
         <div class="flex justify-center mb-12 space-x-12">
@@ -276,8 +280,8 @@ const swiperModules = [Autoplay, Pagination, Navigation]
         </div>
 
         <!-- 主要产品展示区 -->
-        <div class="w-5/6 bg-white mx-auto grid grid-cols-4 grid-rows-2 gap-8 p-8">
-          <div class="col-span-4 row-span-1 flex justify-center items-cente rounded-md">
+        <div class="w-[calc(100vw-16rem)] bg-white mx-auto grid grid-cols-4 grid-rows-2 gap-8 p-8">
+          <div class="col-span-4 row-span-1 flex justify-center items-center rounded-md">
             <div class="w-1/2">
               <img src="../images/MainPage/HotX7.webp" alt="POCO X7 Pro" />
             </div>
@@ -309,13 +313,15 @@ const swiperModules = [Autoplay, Pagination, Navigation]
                 <img
                   src="../images/MainPage/Hot15.webp"
                   alt="Xiaomi 15 Ultra"
-                  class="w-44 object-contain"
+                  class="w-28 object-contain"
                 />
               </div>
-              <h4 class="text-xl font-semibold mb-6">Xiaomi 15 Ultra</h4>
-              <div class="flex items-end space-x-4">
-                <p class="text-xl font-semibold">從 <span class="text-sm">NT$</span>32,999 起</p>
-                <p class="text-lg line-through text-gray-500">NT$34,999</p>
+              <h4 class="text-lg font-semibold mb-6">Xiaomi 15 Ultra</h4>
+              <div class="flex items-end mb-16">
+                <p class="text-lg font-semibold mr-4">
+                  從 <span class="text-sm">NT$</span>32,999 起
+                </p>
+                <p class="text-sm line-through text-gray-500">NT$34,999</p>
               </div>
             </div>
           </div>
@@ -327,13 +333,15 @@ const swiperModules = [Autoplay, Pagination, Navigation]
                 <img
                   src="../images/MainPage/Hot14.webp"
                   alt="Xiaomi 14T Pro"
-                  class="w-44 object-contain"
+                  class="w-28 object-contain"
                 />
               </div>
-              <h4 class="text-xl font-semibold mb-6">Xiaomi 14T Pro</h4>
-              <div class="flex items-end space-x-4">
-                <p class="text-xl font-semibold">從 <span class="text-sm">NT$</span>15,999 起</p>
-                <p class="text-lg line-through text-gray-500">NT$17,999</p>
+              <h4 class="text-lg font-semibold mb-6">Xiaomi 14T Pro</h4>
+              <div class="flex items-end mb-16">
+                <p class="text-lg font-semibold mr-4">
+                  從 <span class="text-sm">NT$</span>15,999 起
+                </p>
+                <p class="text-sm line-through text-gray-500">NT$17,999</p>
               </div>
             </div>
           </div>
@@ -345,13 +353,15 @@ const swiperModules = [Autoplay, Pagination, Navigation]
                 <img
                   src="../images/MainPage/HotF7.webp"
                   alt="POCO F7 Ultra"
-                  class="w-44 object-contain"
+                  class="w-28 object-contain"
                 />
               </div>
-              <h4 class="text-xl font-semibold mb-6">POCO F7 Ultra</h4>
-              <div class="flex items-end space-x-4">
-                <p class="text-xl font-semibold">從 <span class="text-sm">NT$</span>17,999 起</p>
-                <p class="text-lg line-through text-gray-500">NT$19,999</p>
+              <h4 class="text-lg font-semibold mb-6">POCO F7 Ultra</h4>
+              <div class="flex items-end mb-16">
+                <p class="text-lg font-semibold mr-4">
+                  從 <span class="text-sm">NT$</span>17,999 起
+                </p>
+                <p class="text-sm line-through text-gray-500">NT$19,999</p>
               </div>
             </div>
           </div>
@@ -363,18 +373,129 @@ const swiperModules = [Autoplay, Pagination, Navigation]
                 <img
                   src="../images/MainPage/HotRedmi.webp"
                   alt="Redmi Note 14"
-                  class="w-44 object-contain"
+                  class="w-28 object-contain"
                 />
               </div>
-              <h4 class="text-xl font-semibold mb-6">Redmi Note 14</h4>
-              <div class="flex items-end space-x-4">
-                <p class="text-xl font-semibold">從 <span class="text-sm">NT$</span>4,399 起</p>
-                <p class="text-lg line-through text-gray-500">NT$4,999</p>
+              <h4 class="text-lg font-semibold mb-6">Redmi Note 14</h4>
+              <div class="flex items-end mb-16">
+                <p class="text-lg font-semibold mr-4">
+                  從 <span class="text-sm">NT$</span>4,399 起
+                </p>
+                <p class="text-sm line-through text-gray-500">NT$4,999</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="mb-20">
+      <h2 class="text-3xl text-center font-bold mb-11">獨家優惠</h2>
+      <swiper :navigation="true" :modules="modules" class="mySwiper w-[74rem] mx-auto">
+        <swiper-slide>
+          <div class="flex justify-center gap-4">
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountGift.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7">
+                <p class="text-lg font-black mb-2">新戶禮遇</p>
+                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountBuy.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7">
+                <p class="text-lg font-black mb-2">每日閃購</p>
+                <p class="text-sm">Xiaomi 電競螢幕 G27i</p>
+                <p class="text-sm">折386元</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountSave.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7">
+                <p class="text-lg font-black mb-2">7月學生優惠 最高再省千元</p>
+                <p class="text-sm">認證學生資格 獲得獨家教育優惠</p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+        <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+      </swiper>
+    </div>
+
+    <div class="mb-20">
+      <h2 class="text-3xl text-center font-bold mb-11">探索更多</h2>
+      <swiper :navigation="true" :modules="modules" class="mySwiper w-[74rem] mx-auto">
+        <swiper-slide>
+          <div class="flex justify-center gap-4">
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg">
+                <img
+                  src="../images/MainPage/discountGift.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg"
+                />
+              </div>
+              <div class="my-7">
+                <p class="text-lg font-black mb-2">新戶禮遇</p>
+                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg">
+                <img
+                  src="../images/MainPage/discountGift.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg"
+                />
+              </div>
+              <div class="my-8">
+                <p class="text-lg font-black mb-2">新戶禮遇</p>
+                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg">
+                <img
+                  src="../images/MainPage/discountGift.webp"
+                  alt="discountGift"
+                  class="object-contain rounded-lg"
+                />
+              </div>
+              <div class="my-8">
+                <p class="text-lg font-black mb-2">新戶禮遇</p>
+                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
+        <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
+        <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
+        <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+      </swiper>
     </div>
 
     <!-- 小米支援頁面內容 -->
@@ -496,5 +617,29 @@ const swiperModules = [Autoplay, Pagination, Navigation]
   position: absolute;
   z-index: 10;
   font-size: 12px;
+}
+
+/* 新的Swiper樣式 */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>
