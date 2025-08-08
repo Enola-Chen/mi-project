@@ -134,7 +134,7 @@ const modules = [Navigation]
         :navigation="true"
         :modules="swiperModules"
         @autoplayTimeLeft="onAutoplayTimeLeft"
-        class="mySwiper h-full"
+        class="swiper h-full"
       >
         <swiper-slide>
           <div class="relative w-full h-full">
@@ -391,7 +391,7 @@ const modules = [Navigation]
 
     <div class="mb-20">
       <h2 class="text-3xl text-center font-bold mb-11">獨家優惠</h2>
-      <swiper :navigation="true" :modules="modules" class="mySwiper w-[74rem] mx-auto">
+      <swiper :navigation="true" :modules="modules" class="swiper w-[74rem] mx-auto">
         <swiper-slide>
           <div class="flex justify-center gap-4">
             <div class="bg-white rounded-md w-[23.75rem] p-4">
@@ -402,7 +402,7 @@ const modules = [Navigation]
                   class="object-contain rounded-lg max-h-full max-w-full"
                 />
               </div>
-              <div class="my-7">
+              <div class="my-7 text-center">
                 <p class="text-lg font-black mb-2">新戶禮遇</p>
                 <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
               </div>
@@ -412,11 +412,11 @@ const modules = [Navigation]
               <div class="rounded-lg h-[266.41px] flex items-center justify-center">
                 <img
                   src="../images/MainPage/discountBuy.webp"
-                  alt="discountGift"
+                  alt="discountBuy"
                   class="object-contain rounded-lg max-h-full max-w-full"
                 />
               </div>
-              <div class="my-7">
+              <div class="my-7 text-center">
                 <p class="text-lg font-black mb-2">每日閃購</p>
                 <p class="text-sm">Xiaomi 電競螢幕 G27i</p>
                 <p class="text-sm">折386元</p>
@@ -426,27 +426,67 @@ const modules = [Navigation]
               <div class="rounded-lg h-[266.41px] flex items-center justify-center">
                 <img
                   src="../images/MainPage/discountSave.webp"
-                  alt="discountGift"
+                  alt="discountSave"
                   class="object-contain rounded-lg max-h-full max-w-full"
                 />
               </div>
-              <div class="my-7">
+              <div class="my-7 text-center">
                 <p class="text-lg font-black mb-2">7月學生優惠 最高再省千元</p>
                 <p class="text-sm">認證學生資格 獲得獨家教育優惠</p>
               </div>
             </div>
           </div>
         </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
+        <swiper-slide>
+          <div class="flex justify-center gap-4">
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountGroupBuy.webp"
+                  alt="discountGroupBuy"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7 text-center">
+                <p class="text-lg font-black mb-2">企業團購</p>
+                <p class="text-sm">快速下單 | 官方直發 | 便捷支付 | 批量發貨</p>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountPoint.webp"
+                  alt="discountPoint"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7 text-center">
+                <p class="text-lg font-black mb-2">玩轉積分</p>
+                <p class="text-sm">積分換好禮，抵現省更多！</p>
+              </div>
+            </div>
+            <div class="bg-white rounded-md w-[23.75rem] p-4">
+              <div class="rounded-lg h-[266.41px] flex items-center justify-center">
+                <img
+                  src="../images/MainPage/discountIMEI.webp"
+                  alt="discountIMEI"
+                  class="object-contain rounded-lg max-h-full max-w-full"
+                />
+              </div>
+              <div class="my-7 text-center">
+                <p class="text-lg font-black mb-2">IMEI兌換</p>
+                <p class="text-sm">使用您的 IMEI/SN 兌換更多優惠</p>
+              </div>
+            </div>
+          </div>
+        </swiper-slide>
       </swiper>
     </div>
 
     <div class="mb-20">
       <h2 class="text-3xl text-center font-bold mb-11">探索更多</h2>
-      <swiper :navigation="true" :modules="modules" class="mySwiper w-[74rem] mx-auto">
+      <swiper :navigation="true" :modules="modules" class="swiper w-[74rem] mx-auto">
         <swiper-slide>
           <div class="flex justify-center gap-4">
             <div class="bg-white rounded-md w-[23.75rem] p-4">
@@ -562,25 +602,38 @@ const modules = [Navigation]
 </template>
 
 <style scoped>
-.mySwiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  /* text-align: center; */
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
-}
-
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* 自定義導航箭頭樣式 */
+:deep(.swiper-button-next),
+:deep(.swiper-button-prev) {
+  width: 30px;
+  height: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 40%;
+  color: #000;
+}
+
+:deep(.swiper-button-next) {
+  right: 2.5rem;
+}
+:deep(.swiper-button-prev) {
+  left: 2.5rem;
+}
+
+:deep(.swiper-button-next:hover),
+:deep(.swiper-button-prev:hover) {
+  background-color: #f0f2f7;
+}
+
+:deep(.swiper-button-next::after),
+:deep(.swiper-button-prev::after) {
+  font-size: 16px;
 }
 
 .autoplay-progress {
@@ -626,7 +679,7 @@ const modules = [Navigation]
 }
 
 .swiper-slide {
-  text-align: center;
+  /* text-align: center; */
   font-size: 18px;
   background: transparent;
 
