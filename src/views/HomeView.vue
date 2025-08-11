@@ -8,7 +8,8 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 // Import required modules
-import { Autoplay, Pagination, Navigation } from 'swiper/modules'
+import { Autoplay, Pagination, Navigation, Virtual } from 'swiper/modules'
+import 'swiper/css/virtual'
 
 // Swiper autoplay progress logic
 const progressCircle = ref(null)
@@ -18,8 +19,64 @@ const onAutoplayTimeLeft = (s, time, progress) => {
   progressContent.value.textContent = `${Math.ceil(time / 1000)}s`
 }
 
+// 探索更多的虛擬滑動設定
+const exploreSlides = ref([
+  {
+    title: '小米發布2024年度ESG報告',
+    description: '小米第七份ESG報告旨在呈現小米公司及其子公司於2024年的ESG策略、管理及執行進展。',
+    image: '../src/images/MainPage/exploreESG.webp',
+  },
+  {
+    title: 'Xiaomi HyperAI',
+    description: 'AI 智慧賦能你的生活&工作',
+    image: '../src/images/MainPage/exploreHyper.webp',
+  },
+  {
+    title: 'Redmi Note 14 Pro+ 5G 沙漠金',
+    description: '精雕細琢 點石成金',
+    image: '../src/images/MainPage/exploreGold.webp',
+  },
+  {
+    title: '加入小米，共創科技未來',
+    description: '小米之家門市夥伴招募中',
+    image: '../src/images/MainPage/exploreHire.webp',
+  },
+  {
+    title: '登入 LINE 購物小米官方商城後下單享回饋',
+    description: '活動時間：8月1日-8月8日',
+    image: '../src/images/MainPage/exploreLine.webp',
+  },
+  {
+    title: '全屋清掃MVP，怎麽比，都領先！',
+    description: '多款清潔家電好康集合',
+    image: '../src/images/MainPage/exploreClean.webp',
+  },
+  {
+    title: '解鎖輕鬆的創作體驗',
+    description: '使用小米 15 與小米 Pad 7 系列',
+    image: '../src/images/MainPage/exploreCreate.webp',
+  },
+])
+
+let exploreSwiperRef = null
+let appendNumber = exploreSlides.value.length
+
+const setExploreSwiperRef = (swiper) => {
+  exploreSwiperRef = swiper
+}
+
+const appendExploreSlide = () => {
+  appendNumber++
+  exploreSlides.value.push({
+    title: `新優惠 ${appendNumber}`,
+    description: '限時特惠',
+    image: '../images/MainPage/discountGift.webp',
+  })
+}
+
 const swiperModules = [Autoplay, Pagination, Navigation]
 const modules = [Navigation]
+const exploreModules = [Pagination, Navigation, Virtual]
 </script>
 
 <template>
@@ -486,56 +543,50 @@ const modules = [Navigation]
 
     <div class="mb-20">
       <h2 class="text-3xl text-center font-bold mb-11">探索更多</h2>
-      <swiper :navigation="true" :modules="modules" class="swiper w-[74rem] mx-auto">
-        <swiper-slide>
-          <div class="flex justify-center gap-4">
-            <div class="bg-white rounded-md w-[23.75rem] p-4">
-              <div class="rounded-lg">
+      <div class="relative max-w-[90%] mx-auto overflow-hidden">
+        <swiper
+          :modules="exploreModules"
+          :slidesPerView="1.8"
+          :centeredSlides="true"
+          :spaceBetween="20"
+          :loop="true"
+          :navigation="{
+            nextEl: '.explore-next',
+            prevEl: '.explore-prev',
+          }"
+          :virtual="true"
+          class="explore-swiper"
+          @swiper="setExploreSwiperRef"
+        >
+          <swiper-slide v-for="(slide, index) in exploreSlides" :key="index" :virtualIndex="index">
+            <div class="relative group cursor-pointer">
+              <div class="overflow-hidden rounded-lg">
                 <img
-                  src="../images/MainPage/discountGift.webp"
-                  alt="discountGift"
-                  class="object-contain rounded-lg"
+                  :src="slide.image"
+                  :alt="slide.title"
+                  class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div class="my-7">
-                <p class="text-lg font-black mb-2">新戶禮遇</p>
-                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
+              <div class="mt-6 px-2 text-center">
+                <p class="text-xl font-bold mb-2">{{ slide.title }}</p>
+                <p class="text-gray-600">{{ slide.description }}</p>
               </div>
             </div>
+          </swiper-slide>
+        </swiper>
 
-            <div class="bg-white rounded-md w-[23.75rem] p-4">
-              <div class="rounded-lg">
-                <img
-                  src="../images/MainPage/discountGift.webp"
-                  alt="discountGift"
-                  class="object-contain rounded-lg"
-                />
-              </div>
-              <div class="my-8">
-                <p class="text-lg font-black mb-2">新戶禮遇</p>
-                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
-              </div>
-            </div>
-            <div class="bg-white rounded-md w-[23.75rem] p-4">
-              <div class="rounded-lg">
-                <img
-                  src="../images/MainPage/discountGift.webp"
-                  alt="discountGift"
-                  class="object-contain rounded-lg"
-                />
-              </div>
-              <div class="my-8">
-                <p class="text-lg font-black mb-2">新戶禮遇</p>
-                <p class="text-sm">首次注冊/登錄小米帳號 領取限定優惠</p>
-              </div>
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>Slide 2</swiper-slide><swiper-slide>Slide 3</swiper-slide>
-        <swiper-slide>Slide 4</swiper-slide><swiper-slide>Slide 5</swiper-slide>
-        <swiper-slide>Slide 6</swiper-slide><swiper-slide>Slide 7</swiper-slide>
-        <swiper-slide>Slide 8</swiper-slide><swiper-slide>Slide 9</swiper-slide>
-      </swiper>
+        <!-- 自定義導航按鈕 -->
+        <button
+          class="explore-prev absolute left-4 top-[200px] z-10 w-10 h-10 bg-white/90 rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-colors"
+        >
+          <span class="material-icons text-gray-600">chevron_left</span>
+        </button>
+        <button
+          class="explore-next absolute right-4 top-[200px] z-10 w-10 h-10 bg-white/90 rounded-full shadow-lg flex items-center justify-center hover:bg-white transition-colors"
+        >
+          <span class="material-icons text-gray-600">chevron_right</span>
+        </button>
+      </div>
     </div>
 
     <!-- 小米支援頁面內容 -->
@@ -673,26 +724,37 @@ const modules = [Navigation]
 }
 
 /* 新的Swiper樣式 */
-.swiper {
-  width: 100%;
-  height: 100%;
+.explore-swiper {
+  overflow: visible !important;
+  padding: 20px 0;
 }
 
-.swiper-slide {
-  /* text-align: center; */
-  font-size: 18px;
-  background: transparent;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.explore-swiper .swiper-slide {
+  opacity: 0.4;
+  transition: all 0.3s ease;
 }
 
-.swiper-slide img {
-  display: block;
+.explore-swiper .swiper-slide-active {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.explore-swiper .swiper-slide-prev,
+.explore-swiper .swiper-slide-next {
+  opacity: 0.7;
+}
+
+/* 隱藏默認的導航按鈕 */
+.explore-swiper :deep(.swiper-button-next),
+.explore-swiper :deep(.swiper-button-prev) {
+  display: none;
+}
+
+/* 確保圖片容器的高度一致 */
+.explore-swiper .swiper-slide img {
   width: 100%;
-  height: 100%;
+  height: 400px;
   object-fit: cover;
+  border-radius: 12px;
 }
 </style>
