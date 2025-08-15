@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import 'material-icons/iconfont/material-icons.css'
+import AppFooter from '../components/AppFooter.vue'
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from 'swiper/vue'
 // Import Swiper styles
@@ -81,21 +82,21 @@ const exploreModules = [Pagination, Navigation, Virtual]
 
 <template>
   <div class="bg-background-gray">
-    <div>
+    <header>
       <!-- top advertisement -->
-      <div class="flex bg-black text-white text-sm py-2">
+      <div class="flex items-center justify-center bg-footer-gray text-white text-sm">
         <p class="text-center flex-1">物流及退貨服務公告</p>
         <div class="flex justify-end">
-          <button class="text-white hover:text-gray-300 transition-colors px-4">
+          <button class="text-white hover:text-gray-300 transition-colors px-4 py-1">
             <span class="material-icons text-base">close</span>
           </button>
         </div>
       </div>
       <!-- 主導航欄 -->
       <div class="bg-white shadow-sm border-b">
-        <div class="w-full flex items-center justify-between h-16 px-4">
+        <div class="w-full flex items-center justify-between px-6 py-2">
           <!-- 左側 - Logo 和主選單 -->
-          <div class="flex items-center space-x-8">
+          <div class="flex items-center space-x-10">
             <!-- MI Logo -->
             <div class="flex items-center">
               <img src="../images/mi-logo.png" alt="mi-logo" class="w-14" />
@@ -103,24 +104,14 @@ const exploreModules = [Pagination, Navigation, Virtual]
 
             <!-- 主要導航選單 -->
             <div class="flex items-center space-x-8">
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                >小米商城</a
-              >
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors">小米商城</a>
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors"
                 >手機/平板</a
               >
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                >智慧穿戴</a
-              >
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                >智慧居家</a
-              >
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                >生活方式</a
-              >
-              <a href="#" class="text-gray-700 hover:text-orange-500 font-medium transition-colors"
-                >POCO</a
-              >
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors">智慧穿戴</a>
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors">智慧居家</a>
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors">生活方式</a>
+              <a href="#" class="text-gray-700 hover:text-orange-500 transition-colors">POCO</a>
             </div>
           </div>
 
@@ -174,7 +165,7 @@ const exploreModules = [Pagination, Navigation, Virtual]
           </div>
         </div>
       </div>
-    </div>
+    </header>
 
     <!-- 主要輪播區域 -->
     <div class="h-[30rem] bg-gray-100">
@@ -202,9 +193,11 @@ const exploreModules = [Pagination, Navigation, Virtual]
               ㄌ
             />
           </div>
-          <div class="absolute inset-0 flex items-center ml-[18rem]">
+          <div class="absolute inset-0 flex items-center ml-[9rem]">
             <div class="max-w-lg">
-              <p class="text-lg font-black mb-2 leading-tight">青春Fun價去<br />學生專屬加碼</p>
+              <p class="text-[1.75rem] font-black mb-2 leading-tight">
+                青春Fun價去<br />學生專屬加碼
+              </p>
               <p class="font-black mt-3">手機平板66折起</p>
               <p class="font-black mb-3">學生憑證再享千元優惠和多重禮</p>
               <p class="text-sm mb-12">7.8 | 10:00 - 7.31 | 23:59</p>
@@ -226,16 +219,16 @@ const exploreModules = [Pagination, Navigation, Virtual]
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="absolute inset-0 flex items-center ml-[18rem]">
+          <div class="absolute inset-0 flex items-center ml-[9rem]">
             <div class="max-w-lg">
-              <p class="text-3xl font-black leading-tight">Xiaomi 手環 10 NFC版</p>
+              <p class="text-[1.75rem] font-black leading-tight">Xiaomi 手環 10 NFC版</p>
               <p class="font-black my-4">7/30前下單享85折配件加購</p>
               <p class="text-sm">
                 9/30前購 NFC 版首次使用 Easy Wallet App 加值贈<span class="block text-sm"
                   >$100回饋金</span
                 >
               </p>
-              <p class="text-sm mt-12">從 <span class="text-sm">NT$</span>1,199 起</p>
+              <p class="text-sm mt-12 mb-2">從 <span class="text-xs">NT$</span>1,199 起</p>
               <div>
                 <button
                   class="text-sm bg-black text-white px-3 py-1 rounded-lg font-bold hover:bg-gray-800 transition-colors"
@@ -255,15 +248,15 @@ const exploreModules = [Pagination, Navigation, Virtual]
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="absolute inset-0 flex items-center ml-[18rem]">
+          <div class="absolute inset-0 flex items-center ml-[9rem]">
             <div class="max-w-lg">
-              <p class="text-3xl font-black mb-2 leading-tight">POCO X7 Pro</p>
+              <p class="text-[1.75rem] font-black mb-2 leading-tight">POCO X7 Pro</p>
               <p class="font-black mt-3">支援 Google 錢包啟用 iPASS 一卡通服務</p>
               <p class="font-black mb-3">旗艦級 Dimensity 8400-Ultra 處理器</p>
-              <p class="font-black mb-3">6000mAh超大電量與90W極速快充</p>
-              <div class="flex items-end space-x-4">
-                <p class="text-sm"><span class="text-sm">NT$</span>7,999</p>
-                <p class="text-sm line-through text-gray-500">NT$9,999</p>
+              <p class="text-sm mt-3 mb-12">6000mAh超大電量與90W極速快充</p>
+              <div class="flex items-end space-x-4 mb-2">
+                <p class="text-sm"><span class="text-xs">NT$</span>7,999</p>
+                <p class="text-xs line-through text-gray-500">NT$9,999</p>
               </div>
               <div class="mb-12">
                 <button
@@ -284,15 +277,17 @@ const exploreModules = [Pagination, Navigation, Virtual]
               class="w-full h-full object-cover"
             />
           </div>
-          <div class="absolute inset-0 flex items-center ml-[18rem]">
+          <div class="absolute inset-0 flex items-center ml-[9rem]">
             <div class="max-w-lg">
-              <p class="text-3xl font-black text-white mb-2 leading-tight">
+              <p class="text-[1.75rem] font-black text-white mb-2 leading-tight">
                 Xiaomi 掃拖機器人 X20 Max
               </p>
               <p class="font-black text-white mt-3 mb-3">可延伸拖地邊刷 8000Pa毫米級清潔</p>
-              <div class="flex items-end space-x-4">
-                <p class="text-white text-sm"><span class="text-sm text-white">NT$</span>14,499</p>
-                <p class="text-sm line-through text-gray-500">NT$15,995</p>
+              <div class="flex items-end space-x-4 mb-2">
+                <p class="text-white mt-12 text-sm">
+                  <span class="text-xs text-white">NT$</span>14,499
+                </p>
+                <p class="text-xs line-through text-gray-500">NT$15,995</p>
               </div>
               <div class="mb-12">
                 <button
@@ -337,7 +332,7 @@ const exploreModules = [Pagination, Navigation, Virtual]
         </div>
 
         <!-- 主要产品展示区 -->
-        <div class="w-[calc(100vw-16rem)] bg-white mx-auto grid grid-cols-4 grid-rows-2 gap-8 p-8">
+        <div class="w-[calc(100vw-6.5rem)] bg-white mx-auto grid grid-cols-4 grid-rows-2 gap-8 p-8">
           <div class="col-span-4 row-span-1 flex justify-center items-center rounded-md">
             <div class="w-1/2">
               <img src="../images/MainPage/HotX7.webp" alt="POCO X7 Pro" />
@@ -378,7 +373,7 @@ const exploreModules = [Pagination, Navigation, Virtual]
                 <p class="text-lg font-semibold mr-4">
                   從 <span class="text-sm">NT$</span>32,999 起
                 </p>
-                <p class="text-sm line-through text-gray-500">NT$34,999</p>
+                <p class="text-sm line-through text-cheaper-gray">NT$34,999</p>
               </div>
             </div>
           </div>
@@ -448,7 +443,7 @@ const exploreModules = [Pagination, Navigation, Virtual]
 
     <div class="mb-20">
       <h2 class="text-3xl text-center font-bold mb-11">獨家優惠</h2>
-      <swiper :navigation="true" :modules="modules" class="swiper w-[74rem] mx-auto">
+      <swiper :navigation="true" :modules="modules" class="swiper w-[calc(100vw-6.5rem)] mx-auto">
         <swiper-slide>
           <div class="flex justify-center gap-4">
             <div class="bg-white rounded-md w-[23.75rem] p-4">
@@ -543,12 +538,12 @@ const exploreModules = [Pagination, Navigation, Virtual]
 
     <div class="mb-20">
       <h2 class="text-3xl text-center font-bold mb-11">探索更多</h2>
-      <div class="relative max-w-[90%] mx-auto overflow-hidden">
+      <div class="relative mx-auto overflow-hidden">
         <swiper
           :modules="exploreModules"
           :slidesPerView="1.8"
           :centeredSlides="true"
-          :spaceBetween="20"
+          :spaceBetween="25"
           :loop="true"
           :navigation="{
             nextEl: '.explore-next',
@@ -559,15 +554,15 @@ const exploreModules = [Pagination, Navigation, Virtual]
           @swiper="setExploreSwiperRef"
         >
           <swiper-slide v-for="(slide, index) in exploreSlides" :key="index" :virtualIndex="index">
-            <div class="relative group cursor-pointer">
-              <div class="overflow-hidden rounded-lg">
+            <div class="relative group cursor-pointer bg-white rounded-lg">
+              <div class="h-[330px] overflow-hidden rounded-xl">
                 <img
                   :src="slide.image"
                   :alt="slide.title"
-                  class="w-full h-[400px] object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-              <div class="mt-6 px-2 text-center">
+              <div class="my-12 text-center">
                 <p class="text-xl font-bold mb-2">{{ slide.title }}</p>
                 <p class="text-gray-600">{{ slide.description }}</p>
               </div>
@@ -649,6 +644,9 @@ const exploreModules = [Pagination, Navigation, Virtual]
         </div>
       </div>
     </div>
+
+    <!-- 頁尾導航 -->
+    <AppFooter />
   </div>
 </template>
 
@@ -724,10 +722,6 @@ const exploreModules = [Pagination, Navigation, Virtual]
 }
 
 /* 新的Swiper樣式 */
-.explore-swiper {
-  overflow: visible !important;
-  padding: 20px 0;
-}
 
 .explore-swiper .swiper-slide {
   opacity: 0.4;

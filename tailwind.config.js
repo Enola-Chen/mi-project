@@ -6,9 +6,11 @@ export default {
       colors: {
         // 小米品牌色
         orange: '#ff6a00',
-        gray: '#8a8a8a',
+        'gray-text': '#8a8a8a',
         'gray-light': '#fafafa',
         'background-gray': '#f7f7f7',
+        'footer-gray': '#191919',
+        'cheaper-gray': '#5e5e5e',
       },
     },
   },
